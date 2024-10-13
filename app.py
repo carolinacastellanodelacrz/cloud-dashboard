@@ -26,10 +26,10 @@ def load_data():
     df = pd.read_csv('datos_energia.csv')
     
     # Convertimos la columna de fecha a datetime
-    df['fecha'] = pd.to_datetime(df['fecha'])
+    df['time'] = pd.to_datetime(df['time'])
     
     # Colocamos la columna de fecha como índice
-    df.set_index('fecha', inplace=True)
+    df.set_index('time', inplace=True)
     
     # Retornar un DataFrame
     return df
